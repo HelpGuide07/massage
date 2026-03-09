@@ -2,6 +2,27 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+
+<script>	
+  (function (w, d, s, l, i) {
+      w['scSdkId'] = i;
+      w[l] = w[l] || []
+      w.scq = function (eventName, eventType, p) {
+      var props = p || {}
+        w[l].push({ eventName: eventName, eventType: eventType, meta: props, eventFireTs: Date.now() })
+      };
+      w.scq("PAGE_VIEW", "AUTO", {
+        pageUrl: w.location.href
+      });
+      var scr = d.createElement(s);
+      scr.type = 'text/javascript';
+      scr.async = true;
+      scr.src = 'https://sc-events-sdk.sharechat.com/web-sdk.js';
+      var x = d.getElementsByTagName(s)[0];
+      x.parentNode.insertBefore(scr, x);
+    })(window, document, "script", "scLayer", "NRlQUgzr2U");
+</script>
+	
 	<meta charset="UTF-8">
 		<title>2 &#8211; massageschool.in</title>
 <meta name='robots' content='max-image-preview:large' />
